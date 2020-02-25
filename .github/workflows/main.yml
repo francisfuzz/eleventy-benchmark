@@ -17,4 +17,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - run: sudo apt-get update
+    - run: sudo apt-get install -y datamash
     - run: ./bench.sh ${{ matrix.version }}
